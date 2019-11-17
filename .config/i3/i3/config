@@ -152,9 +152,6 @@ bindsym $mod+r mode "resize"
 # set background
 exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/SolarNight.png
 
-# connect to wifi
-exec --no-startup-id ncli dev wifi connect "TelstraDC01BF" password "u8kbyecmm9"
-
 # ==============================================================================
 # 	Window tiles
 # ==============================================================================
