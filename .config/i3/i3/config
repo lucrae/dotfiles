@@ -150,7 +150,10 @@ bindsym $mod+r mode "resize"
 # ==============================================================================
 
 # set background
-exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/SolarNight.png
+exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/HomerMaineCoast.jpg
+
+# connect to wifi
+# exec --no-startup-id ncli dev wifi connect "TelstraDC01BF" password "PASSWORD"
 
 # ==============================================================================
 # 	Window tiles
@@ -158,8 +161,8 @@ exec --no-startup-id feh --bg-scale ~/Pictures/Wallpapers/SolarNight.png
 
 # class                 border, bground, text, indicator, child_border
 client.focused          $blue $blue $light2 $blue $blue
-client.focused_inactive $dark1 $dark1 $light2 $dark1 $dark1
-client.unfocused        $dark1 $dark1 $light2 $dark1 $dark1
+client.unfocused        $dark1 $dark1 $light2 $dark1 $black
+client.focused_inactive $dark1 $dark1 $light2 $dark1 $black
 client.urgent           $red $red $light0 $red $red
 
 # ==============================================================================
@@ -197,10 +200,11 @@ gaps outer 0
 #	Custom Keybinds
 # ==============================================================================
 
-# bindsym $mod+d exec "dmenu_run -nf '#AEB2BB' -nb '#0F1116' -sb '#3774A3' -sf '#0F1116' -fn 'monospace-12' -p 'What would you like?'"
-
 bindsym $mod+d exec rofi -show run -theme config
+bindsym $mod+shift+d exec "dmenu_run -nf '#AEB2BB' -nb '#0F1116' -sb '#3774A3' -sf '#0F1116' -fn 'monospace-12' -p 'What would you like?'"
 bindsym $mod+Return exec kitty
-bindsym $mod+n exec firefox
+bindsym $mod+n exec chromium
 bindsym $mod+m exec spotify
 bindsym $mod+c exec $HOME/Apps/VSCode/code
+bindsym $mod+l exec betterlockscreen -l
+bindsym $mod+b exec pcmanfm

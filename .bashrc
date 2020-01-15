@@ -130,7 +130,7 @@ ex ()
       *.tar.bz2)   tar xjf $1   ;;
       *.tar.gz)    tar xzf $1   ;;
       *.bz2)       bunzip2 $1   ;;
-      *.rar)       unrar x $1     ;;
+      *.rar)       unrar x $1   ;;
       *.gz)        gunzip $1    ;;
       *.tar)       tar xf $1    ;;
       *.tbz2)      tar xjf $1   ;;
@@ -146,8 +146,18 @@ ex ()
 }
 
 # ================================================================
+#	Global variables
+# ================================================================
+
+export EDITOR=nano
+
+# ================================================================
 #	Custom Aliases
 # ================================================================
 
 alias code="$HOME/Apps/VSCode/code"
 alias savedf="bash $HOME/Scripts/backup_dotfiles.sh"
+alias nb="jupyter notebook --browser chromium"
+alias public_ip="echo ipv4:; curl ipecho.net/plain; echo; echo ipv6:; curl icanhazip.com"
+alias la="ls -a"
+alias proj="cd ~/Projects/2020/"

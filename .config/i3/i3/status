@@ -28,7 +28,7 @@ order += "disk /"
 order += "wireless wlp1s0"
 order += "volume master"
 order += "battery 0"
-order += "tztime local"
+order += "tztime melbourne"
 
 # ================================================================
 #	Block formats
@@ -74,6 +74,8 @@ battery 0 {
 }
 
 # date and time
-tztime local {
-    format = "  %d-%m-%Y   %H:%M:%S  "
+tztime melbourne {
+    format = "%time "
+    format_time = "  %d-%m-%Y   %H:%M:%S"
+    timezone = "Oceania/Melbourne"
 }
