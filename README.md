@@ -1,4 +1,4 @@
-Dotfiles, setup based on Simon[https://medium.com/@simontoth/best-way-to-manage-your-dotfiles-2c45bb280049].
+Dotfiles, setup based on [Šimon Tóth's simple approach](https://medium.com/@simontoth/best-way-to-manage-your-dotfiles-2c45bb280049).
 
 # Set-up:
 
@@ -27,8 +27,14 @@ dotfiles checkout
 
 # Adding/updating files
 
+Use `dotfiles` as an alias for `git`.
+
 ```
 dotfiles add ~/.bashrc
 dotfiles commit -m 'Description...'
-dotfiles push -u origin main
+dotfiles push
 ```
+
+(If `dotfiles push` does not work try `dotfiles push -u origin main`)
+
+
